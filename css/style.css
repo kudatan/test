@@ -2,6 +2,18 @@ body{
     margin:0;
     padding:0;
 }
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+.container-main, .container-main-form{
+    flex-grow: 1;
+}
+
+
 /* hanburger menu */
 #menu_toggle {
     opacity: 0;
@@ -77,8 +89,18 @@ body{
     width: 100%;
     position: fixed;
     top: 0;
-    padding: 15px 100px;
+    padding-top: 30px;
     background-image: url(../img/back-1.jpg);
+    border-radius: 0px 0px 50px 50px;
+}
+
+
+
+
+.container-head, .container-main, .container-foot, .container-main-form{
+    max-width: 800px;
+    margin-right: auto;
+    margin-left:  auto; 
 }
 
 
@@ -102,12 +124,13 @@ ul#navbar-nav li{
 }
 .navbar{
     display: flex;
+    justify-content: space-between
 }
-.navbar-nav{
+/* .navbar-nav{
     position: absolute;
     right: 0;
     margin-right: 40px;
-}
+} */
 #logo{
     max-width: 50px;
 }
@@ -117,7 +140,7 @@ ul#navbar-nav li{
 
 header{
     background-image: url(../img/back-1.jpg);
-    border-radius: 50px 50px;
+    border-radius: 0px 0px 50px 50px;
 }
 
 /* main home */
@@ -130,38 +153,52 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 95px;
-    margin-left: 50px;
+    /* margin-top: 95px;
+    margin-left: 50px; */
+    padding-top: 50px;
 }
 
 
 /* contacts */
-.form{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+#submit{
+    background-color: #F26430;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-family: "Roboto-Medium";
 }
-#submit{
-    background-color: #f9ffa2;
-    border-color: #4cd7fa;
-    cursor: pointer;
+input[type=text] {
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    margin: 8px 0;
+    font-family: "Roboto-Medium";
+    font-size: 15px;
+    width: 190px;
+}
+input[type=text]:focus{
+    border: 3px solid rgb(41, 117, 216);
 }
 
 
 footer{
     background-image: url(../img/back-2.jpg);
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
     width: 100%;
 }
 .foot-text{
     font-family: "Roboto-Medium";
     text-align: center
-
 }
 
+.container-main-form{
+    display: flex;
+    align-items: center;
+}
 
 
 @font-face {
@@ -192,5 +229,14 @@ footer{
     }
     .navbar-brand{
         padding: 12px 4px;
+    }
+    .page-header{
+        font-size: 25px;
+    }
+    .paragraph-1{
+        font-size: 25px;
+    }
+    .container-main, .container-foot, .container-main-form{
+        padding: 0px 20px;
     }
 }
